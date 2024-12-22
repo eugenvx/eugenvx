@@ -1,0 +1,13 @@
+const express = require('express');
+const app = express();
+
+const objectives = require('./objectives.json'); // JSON-ul definit
+
+app.get('/objectives', (req, res) => {
+    res.json(objectives);
+});
+
+const PORT = 8080;
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
